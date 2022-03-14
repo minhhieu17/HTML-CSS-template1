@@ -4,68 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKom - Single Product eCommerce HTML Template</title>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/icon/fontawesome-free-6.0.0-web/css/all.css">
     <link rel="stylesheet" href="./assets/fonts/icon/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/variables.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <title>eKom - Single Product eCommerce HTML Template</title>
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
 </head>
 <body>
     <div id="main">
         <!-- Navbar -->
-        <div id="header" class="wrapper-container">
+        <div id="header">
+        <div class="navbar-wrap wrapper-container">
             <div class="navbar">
-            <a href="#" class="navbar-brand">
-                <img src="./assets/img/logo.png" alt="eKom" class="logo">
-            </a>
-                <div class="navbar-list">
-                    <ul class="nav">
-                        <li>
-                        <a href="#" style="color: #cd9453;"> Home 
-                            <i class="ti-angle-down"></i>
-                        </a>
-                        <ul class="subnav">
-                            <li class="subnav-item"><a href="">Demo - Headphone</a></li>
-                            <li class="subnav-item"><a href="">Demo - Watch</a></li>
-                            <li class="subnav-item"><a href="">Demo - Shoes</a></li>
-                        </ul>
-                        </li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Shop <i class="ti-angle-down"></i>
+                <a href="#" class="navbar-brand">
+                    <img src="./assets/img/logo.png" alt="eKom" class="logo">
+                </a>
+                    <div class="navbar-list">
+                        <ul class="nav">
+                            <li>
+                            <a href="#" style="color: #cd9453;"> Home 
+                                <i class="ti-angle-down"></i>
                             </a>
                             <ul class="subnav">
-                                <li class="subnav-item"><a href="">Shop Layout <i class="ti-angle-right"></i></a></li>
-                                <li class="subnav-item"><a href="">Shop Details</a></li>
-                                <li class="subnav-item"><a href="">Wishlist</a></li>
-                                <li class="subnav-item"><a href="">cart</a></li>
-                                <li class="subnav-item"><a href="">Chekout</a></li>
-                                <li class="subnav-item"><a href="">Track Order</a></li>
-                                <li class="subnav-item"><a href="">User Pages <i class="ti-angle-right"></i> </a></li>
+                                <li class="subnav-item"><a href="">Demo - Headphone</a></li>
+                                <li class="subnav-item"><a href="">Demo - Watch</a></li>
+                                <li class="subnav-item"><a href="">Demo - Shoes</a></li>
                             </ul>
-                        </li>
-                        <li><a href="#">Page <i class="ti-angle-down"></i>
-                            </a>
-                            <ul class="subnav">
-                                <li class="subnav-item"><a href="">FAQ</a></li>
-                                <li class="subnav-item"><a href="">Testimonails</a></li>
-                                <li class="subnav-item"><a href="">Term of service</a></li>
-                                <li class="subnav-item"><a href="">Privacy Policy</a></li>
-                                <li class="subnav-item"><a href="">404 Error Page</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Blog <i class="ti-angle-down"></i>
-                            </a>
-                            <ul class="subnav">
-                                <li class="subnav-item"><a href="">Blog Layout <i class="ti-angle-right"></i></a>
-                                </li>
-                                <li class="subnav-item"><a href="">Single Layout <i class="ti-angle-right"></i></a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                            </li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Shop <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="subnav">
+                                    <li class="subnav-item"><a href="">Shop Layout <i class="ti-angle-right"></i></a></li>
+                                    <li class="subnav-item"><a href="">Shop Details</a></li>
+                                    <li class="subnav-item"><a href="">Wishlist</a></li>
+                                    <li class="subnav-item"><a href="">cart</a></li>
+                                    <li class="subnav-item"><a href="">Chekout</a></li>
+                                    <li class="subnav-item"><a href="">Track Order</a></li>
+                                    <li class="subnav-item"><a href="">User Pages <i class="ti-angle-right"></i> </a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Page <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="subnav">
+                                    <li class="subnav-item"><a href="">FAQ</a></li>
+                                    <li class="subnav-item"><a href="">Testimonails</a></li>
+                                    <li class="subnav-item"><a href="">Term of service</a></li>
+                                    <li class="subnav-item"><a href="">Privacy Policy</a></li>
+                                    <li class="subnav-item"><a href="">404 Error Page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Blog <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="subnav">
+                                    <li class="subnav-item"><a href="">Blog Layout <i class="ti-angle-right"></i></a>
+                                    </li>
+                                    <li class="subnav-item"><a href="">Single Layout <i class="ti-angle-right"></i></a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><button class="lg-mobile">Login</button></li>
+                        </ul> 
+                    </div>
                     <div class="nav-option">
                         <div class="nav-lg">
-                            <a href="#">Login</a>
+                            <button class="lg-btn">
+                              <span class="btn-text">Login</span>  
+                            </button>
                         </div>
                         <div class="nav-search">
                             <button class="src-btn" type="button">
@@ -75,7 +83,11 @@
                         <div class="nav-shopping">
                             <button class="buy-btn" type="button">
                                 <i class="fa-solid fa-cart-shopping"><span>1</span></i>
-                                
+                            </button>
+                        </div>
+                        <div class="nav-menu">
+                            <button class="menu-btn">
+                                <i class="fa-solid fa-bars"></i>
                             </button>
                         </div>
                     </div>
@@ -84,15 +96,17 @@
 
         </div>
         <!-- Slider -->
-        <div id="slider-wrapper" class="wrapper-container">
-            <div class="slider">
+        <div id="slider-wrapper">
+            <div class="slider wrapper-container">
                 <div class="container">
                     <div class="slider-content">
                         <span>EXTRA 20% OFF</span>
                         <h1>Grab Your Shoes On This Offer</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum verit atis assum enda maiores eos ducimus ullam accusamus vitae beatae quas in.</p>
                         <div class="slider-btn">
-                            <a href="" class="buy-sld">Shop Now</a>
+                            <button class="buy-sld">
+                               <span class="btn-text">Shop Now</span> 
+                            </button>
                              <a href="" class="play-video">
                                  <button class="play-btn"><i class=" play-icon fa-solid fa-play"></i></button>
                                  <span class="play-text">Watch Video</span>
@@ -189,7 +203,9 @@
                                 </div>
                             </div>
                             <div class="ab-btn">
-                                <a href="">Read More</a>
+                                <button class="rm-btn">
+                                    <span class="btn-text">Read More</span>
+                                </button>
                             </div>
                     </div>
                 </div>
@@ -221,8 +237,8 @@
             </div>
         </div>
         <!-- Offer -->
-        <div id="offer-wrap" class="wrapper-container">
-            <div class="offer-section">
+        <div id="offer-wrap">
+            <div class="offer-section wrapper-container">
                 <div class="offer-item">
                     <div class="offer-text-wrap">
                         <div class="offer-text">
@@ -231,7 +247,12 @@
                                 <h2>Discount 50% Off</h2>
                                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin.</p>
                             </div>
-                            <a href="">Shop Now</a>
+                            <button class="offer-btn">
+                                <span class="btn-text">
+                                    Shop Now
+                                </span>
+
+                            </button>
                         </div>
                     </div>
                     <div class="offer-img-wrap">
@@ -251,13 +272,34 @@
                     </div>
                 <div class="product-item">
                     <div class="product-card-wrap">
-                        <div class="product-card">
+                        <input type="radio" name="inputproduct" id="product1">
+                        <input type="radio" name="inputproduct" id="product2">
+                        <input type="radio" name="inputproduct" id="product3">
+                        <input type="radio" name="inputproduct" id="product4">
+                        <div class="product-card slide-product1">
                             <div class="product-img">
                                 <img src="./assets/img/product1.png" alt="Image">
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     4.00
                                 </span>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="product-info">
                                 <h3>Nilon RS-X Bold</h3>
@@ -267,13 +309,30 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card slide-product2">
                             <div class="product-img">
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     4.00
                                 </span>
                                 <img src="./assets/img/product2.png" alt="Image">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="product-info">
                                 <h3>Nilon Van Cleef</h3>
@@ -283,13 +342,30 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card slide-product3">
                             <div class="product-img">
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     4.00
                                 </span>
                                 <img src="./assets/img/product3.png" alt="Image">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="product-info">
                                 <h3>Apex Sneakers</h3>
@@ -298,13 +374,30 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="product-card">
+                        <div class="product-card slide-product4">
                             <div class="product-img">
                                 <span>
                                     <i class="fa-solid fa-star"></i>
                                     4.00
                                 </span>
                                 <img src="./assets/img/product4.png" alt="Image">
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-eye"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="product-info">
                                 <h3>La Marous</h3>
@@ -314,6 +407,12 @@
                                 </p>
                             </div>
                         </div>
+                    </div>
+                    <div class="label-product">
+                            <label for="product1"></label>
+                            <label for="product2"></label>
+                            <label for="product3"></label>
+                            <label for="product4"></label>
                     </div>
                 </div>
             </div>
@@ -368,7 +467,6 @@
                 </div>  
             </div>
         </div>
-        
         <!-- Promo -->
         <div id="promo-wrap" class="wrapper-container">
             <div class="promo">
@@ -404,73 +502,75 @@
             </div>
         </div>
         <!-- Feedback -->
-        <div id="feedback-wrap" class="wrapper-container">
-            <div class="feedback">
-                <div class="feedback-title">
-                    <span>TESTIMONIALS</span>
-                    <h2>Our Customers Feedback</h2>
-                </div>
-                <div class="feedback-item">
-                    <div class="client-wrap">
-                        <div class="client-content">
-                            <div class="client-icon">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet adip elitionus repellus ata tetur delni vel quam aliqous earadi umiotion sit explibom dolor eme.</p>
-                            <div class="client-info-wrap">
-                                <div class="client-img">
-                                    <img src="./assets/img/client1.jpg" alt="image">
+        <div id="feedback-wrap">
+            <div class="feedback-item wrapper-container">
+                <div class="feedback">
+                    <div class="feedback-title">
+                        <span>TESTIMONIALS</span>
+                        <h2>Our Customers Feedback</h2>
+                    </div>
+                    <div class="feedback-item">
+                        <div class="client-wrap">
+                            <div class="client-content">
+                                <div class="client-icon">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <div class="client-info">
-                                    <h4>Jim Morison</h4>
-                                    <p>Director, BAT</p>
+                                <p>Lorem ipsum dolor sit amet adip elitionus repellus ata tetur delni vel quam aliqous earadi umiotion sit explibom dolor eme.</p>
+                                <div class="client-info-wrap">
+                                    <div class="client-img">
+                                        <img src="./assets/img/client1.jpg" alt="image">
+                                    </div>
+                                    <div class="client-info">
+                                        <h4>Jim Morison</h4>
+                                        <p>Director, BAT</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="client-wrap">
-                        <div class="client-content">
-                            <div class="client-icon">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet adip elitionus repellus ata tetur delni vel quam aliqous earadi umiotion sit explibom dolor eme.</p>
-                            <div class="client-info-wrap">
-                                <div class="client-img">
-                                    <img src="./assets/img/client2.jpg" alt="image">
+    
+                        <div class="client-wrap">
+                            <div class="client-content">
+                                <div class="client-icon">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <div class="client-info">
-                                    <h4>Alex Cruis</h4>
-                                    <p>CEO, IBAC</p>
+                                <p>Lorem ipsum dolor sit amet adip elitionus repellus ata tetur delni vel quam aliqous earadi umiotion sit explibom dolor eme.</p>
+                                <div class="client-info-wrap">
+                                    <div class="client-img">
+                                        <img src="./assets/img/client2.jpg" alt="image">
+                                    </div>
+                                    <div class="client-info">
+                                        <h4>Alex Cruis</h4>
+                                        <p>CEO, IBAC</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="client-wrap">
-                        <div class="client-content">
-                            <div class="client-icon">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </div>
-                            <p>Lorem ipsum dolor sit amet adip elitionus repellus ata tetur delni vel quam aliqous earadi umiotion sit explibom dolor eme.</p>
-                            <div class="client-info-wrap">
-                                <div class="client-img">
-                                    <img src="./assets/img/client3.jpg" alt="image">
+                        <div class="client-wrap">
+                            <div class="client-content">
+                                <div class="client-icon">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
                                 </div>
-                                <div class="client-info">
-                                    <h4>Tom Haris</h4>
-                                    <p>Engineer, Olleo</p>
+                                <p>Lorem ipsum dolor sit amet adip elitionus repellus ata tetur delni vel quam aliqous earadi umiotion sit explibom dolor eme.</p>
+                                <div class="client-info-wrap">
+                                    <div class="client-img">
+                                        <img src="./assets/img/client3.jpg" alt="image">
+                                    </div>
+                                    <div class="client-info">
+                                        <h4>Tom Haris</h4>
+                                        <p>Engineer, Olleo</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -509,7 +609,10 @@
                                 </ul>
                                 <h3>How Can I Buy The Product</h3>
                                 <p>White in eu mi bibendum neque egestas set cong tincidunt nunc pulvinar sapien</p>
-                                <a href="#">Read More</a>
+                                <a href="#">
+                                    Read More
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -535,7 +638,10 @@
                                 </ul>
                                 <h3>How To Return The Product</h3>
                                 <p>White in eu mi bibendum neque egestas set cong tincidunt nunc pulvinar sapien</p>
-                                <a href="#">Read More</a>
+                                <a href="#">
+                                    Read More
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -561,7 +667,10 @@
                                 </ul>
                                 <h3>How To Pay Online</h3>
                                 <p>White in eu mi bibendum neque egestas set cong tincidunt nunc pulvinar sapien</p>
-                                <a href="#">Read More</a>
+                                <a href="#">
+                                    Read More
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -569,8 +678,8 @@
             </div>
         </div>
         <!-- Newsletter -->
-        <div id="newsletter-section" class="wrapper-container">
-            <div class="newsletter-wrap">
+        <div id="newsletter-section">
+            <div class="newsletter-wrap wrapper-container">
                 <div class="newsletter-item">
                     <div class="nl-title-container">
                         <div class="nl-title">
@@ -587,140 +696,142 @@
             </div>
         </div>
         <!-- Footer -->
-        <div id="footer-section" class="wrapper-container">
-            <div class="footer-wrap">
-                <div class="footer-item">
-                    <div class="footer-content-wrap">
-                        <div class="footer-widget">
-                            <a href="#">
-                                <img src="./assets/img/footerlogo.png" alt="Image">
-                            </a>
-                            <p>
-                                Lorem ipsum dolor sit amet consec tetur adisoom isotope elit eiusmod temporum incidunt labore dolore magna aliqu core tetur adip iscing eliteous sedun amet adisoom isotope.
-                            </p>
-                            <div class="social-icon">
-                                <h6>Follow Us:</h6>
-                                <ul>
-                                    <li>
-                                        <a target="_blank" href="https://facebook.com">
-                                            <i class="fa-brands fa-facebook-f"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://twitter.com">
-                                            <i class="fa-brands fa-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://linkedin.com">
-                                            <i class="fa-brands fa-linkedin-in"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://instagram.com">
-                                            <i class="fa-brands fa-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+        <div id="footer-section">
+            <div class="footer-wrap wrapper-container">
+                <div class="footer">
+                    <div class="footer-item">
+                        <div class="footer-content-wrap">
+                            <div class="footer-widget">
+                                <a href="#">
+                                    <img src="./assets/img/footerlogo.png" alt="Image">
+                                </a>
+                                <p>
+                                    Lorem ipsum dolor sit amet consec tetur adisoom isotope elit eiusmod temporum incidunt labore dolore magna aliqu core tetur adip iscing eliteous sedun amet adisoom isotope.
+                                </p>
+                                <div class="social-icon">
+                                    <h6>Follow Us:</h6>
+                                    <ul>
+                                        <li>
+                                            <a target="_blank" href="https://facebook.com">
+                                                <i class="fa-brands fa-facebook-f"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://twitter.com">
+                                                <i class="fa-brands fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://linkedin.com">
+                                                <i class="fa-brands fa-linkedin-in"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a target="_blank" href="https://instagram.com">
+                                                <i class="fa-brands fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
+                            <div class="footer-infor">
+                                <div class="footer-widget">
+                                    <h3 class="footer-widget-title">Information</h3>
+                                    <ul class="footer-menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                About Us
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Our Shop
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Contact Us
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Refund Policy
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Privacy Policy
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-account">
+                                <div class="footer-widget">
+                                    <h3 class="footer-widget-title">Account</h3>
+                                    <ul class="footer-menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                My Account
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                My Orders
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Returns
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Wishlist
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa-solid fa-angle-right"></i>
+                                                Shipping
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer-contact">
+                                <div class="footer-widget">
+                                    <h3 class="footer-widget-title">Get In Touch</h3>
+                                    <ul class="contact-info">
+                                        <li>
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <h6>Location</h6>
+                                            <p>2967 Sunrise Street, New York</p>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <h6>Email</h6>
+                                            <a href="#">hello@eKom.com</a>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-phone"></i>
+                                            <h6>phone</h6>
+                                            <a href="#">+1-3454-5678-77</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                     </div>
-                        <div class="footer-infor">
-                            <div class="footer-widget">
-                                <h3 class="footer-widget-title">Information</h3>
-                                <ul class="footer-menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            About Us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Our Shop
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Contact Us
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Refund Policy
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Privacy Policy
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-account">
-                            <div class="footer-widget">
-                                <h3 class="footer-widget-title">Account</h3>
-                                <ul class="footer-menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            My Account
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            My Orders
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Returns
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Wishlist
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa-solid fa-angle-right"></i>
-                                            Shipping
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="footer-contact">
-                            <div class="footer-widget">
-                                <h3 class="footer-widget-title">Get In Touch</h3>
-                                <ul class="contact-info">
-                                    <li>
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <h6>Location</h6>
-                                        <p>2967 Sunrise Street, New York</p>
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <h6>Email</h6>
-                                        <a href="#">hello@eKom.com</a>
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-phone"></i>
-                                        <h6>phone</h6>
-                                        <a href="#">+1-3454-5678-77</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
                 </div>
             </div>
             <p class="footer-copyright">
