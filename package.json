@@ -1,0 +1,19 @@
+{
+  "name": "ekom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minhhieu17/HTML-CSS-template1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minhhieu17/HTML-CSS-template1/issues"
+  },
+  "homepage": "https://github.com/minhhieu17/HTML-CSS-template1#readme"
+}
