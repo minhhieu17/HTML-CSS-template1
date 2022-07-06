@@ -171,7 +171,7 @@ const removeItem = id => {
   displayCartItems();
 }
 
-// Total
+// Total Price
 function displayTotalPrice() {
   let totalPrice = 0,
       totalItem = 0;
@@ -182,7 +182,6 @@ function displayTotalPrice() {
   totalPriceEl.innerHTML = `$${totalPrice}`;
   totalItemEl.innerHTML = `${totalItem}`;
 }
-
 
 main();
 

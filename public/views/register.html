@@ -100,58 +100,64 @@
             <div class="login-wrap">
                 <div class="login-container">
                     <div class="login-form-wrap">
-                        <div class="login-form-container">
-                            <div class="login-form">
-                                <h3>Create New Account</h3>
-                                <div class="login-form-body">
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <input id= "text" name="fname" type="text" required placeholder="Full Name">
+                        <div class="login-form-container">  
+                            <form id="myform" action="/api/users/register" method="POST">
+                                <div class="login-form">
+                                    <h3>Create New Account</h3>
+                                    <div class="login-form-body">
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <input id= "fullname" name="fullname" type="text" required placeholder="Full Name">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <input id= "email" name="email" type="email" required placeholder="Email">
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <input id= "email" name="email" type="text" required placeholder="Email">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <input id= "pwd" name="pwd" type="password" required placeholder="Password">
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <input id= "password" name="password" type="password" required placeholder="Password">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <input id= "pwd_2" name="pwd_2" type="password" required placeholder="Confirm Password">
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <input id= "cfpassword" name="cfpassword" type="password" required placeholder="Confirm Password">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-check">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="test_1">
-                                            <label for="test_1">
-                                                I Agree with the 
-                                                <a href="">
-                                                    Terms & conditions
-                                                </a>
-                                            </label>
+                                        <div class="form-check">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="test_1">
+                                                <label for="test_1">
+                                                    I Agree with the 
+                                                    <a href="">
+                                                        Terms & conditions
+                                                    </a>
+                                                </label>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <a class=" lg-form-btn rgt-form-btn">
-                                                <span class="btn-text">Register Now</span>
-                                            </a>
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <button class=" lg-form-btn" type="submit">
+                                                    <span class="btn-text">Register Now</span>
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-footer">
-                                        <div class="lg-form-footer">
-                                            <p>
-                                                Have an Account?
-                                            </p>
-                                            <a href="/login">Sign In</a>
+                                        <div class="form-footer">
+                                            <div class="lg-form-footer">
+                                                <p>
+                                                    Have an Account?
+                                                </p>
+                                                <a href="/views/login">Sign In</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -323,4 +329,5 @@
             </p>
         </div>
     </div>
+    <script src="/public/assets/js/register.js"></script>
 </body>

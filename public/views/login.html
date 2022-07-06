@@ -101,68 +101,72 @@
                 <div class="login-container">
                     <div class="login-form-wrap">
                         <div class="login-form-container">
-                            <div class="login-form">
-                                <h3>Login To Your Account</h3>
-                                <div class="login-form-body">
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <input id= "email" name="email" type="email" required placeholder="Email">
+                            <form action="/api/users/login" id="login-form" method="POST">
+                                <div class="login-form">
+                                    <h3>Login To Your Account</h3>
+                                    <div class="login-form-body">
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <input id= "email" name="email" type="email" required placeholder="Email">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <input id= "pwd" name="pwd" type="password" required placeholder="Password">
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <input id= "password" name="password" type="password" required placeholder="Password">
+                                                <div class="error"></div>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-check">
-                                        <div class="checkbox">
-                                            <input type="checkbox" id="test_1">
-                                            <label for="test_1">
-                                                Remember Me
-                                            </label>
+                                        <div class="form-check">
+                                            <div class="checkbox">
+                                                <input type="checkbox" id="test_1">
+                                                <label for="test_1">
+                                                    Remember Me
+                                                </label>
+                                            </div>
+                                            <div class="check-pw">
+                                                <a href="">
+                                                    Forgot Password?
+                                                </a>
+                                            </div>                                      
                                         </div>
-                                        <div class="check-pw">
-                                            <a href="">
-                                                Forgot Password?
-                                            </a>
-                                        </div>                                      
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="form-group">
-                                            <a class="lg-form-btn">
-                                                <span class="btn-text">Login</span>
-                                            </a>
+                                        <div class="form-group-wrap">
+                                            <div class="form-group">
+                                                <button class="lg-form-btn" type="submit">
+                                                    <span class="btn-text">Login</span>
+                                                </button>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group-wrap">
-                                        <div class="or-text">
-                                            <p>
-                                                Or
-                                            </p>
-                                            <a href="" class="fb-btn">
-                                                <span class="btn-text">
-                                                    <i class="fa-brands fa-facebook-f"></i>
-                                                    Login With FaceBook
-                                                </span>
-                                            </a>
-                                            <a href="" class="gg-btn">
-                                                <span class="btn-text">
-                                                    <i class="fa-brands fa-google"></i>
-                                                    Login With Google
-                                                </span>
-                                            </a>
+                                        <div class="form-group-wrap">
+                                            <div class="or-text">
+                                                <p>
+                                                    Or
+                                                </p>
+                                                <a class="fb-btn">
+                                                    <span class="btn-text">
+                                                        <i class="fa-brands fa-facebook-f"></i>
+                                                        Login With FaceBook
+                                                    </span>
+                                                </a>
+                                                <a class="gg-btn">
+                                                    <span class="btn-text">
+                                                        <i class="fa-brands fa-google"></i>
+                                                        Login With Google
+                                                    </span>
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-footer">
-                                        <div class="lg-form-footer">
-                                            <p>
-                                                Don't Have an Account?
-                                            </p>
-                                            <a href="/register">Create One</a>
+                                        <div class="form-footer">
+                                            <div class="lg-form-footer">
+                                                <p>
+                                                    Don't Have an Account?
+                                                </p>
+                                                <a href="/views/register">Create One</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -354,5 +358,7 @@
             </div>
         </div>
     </div>
+    <script></script>
+    <script src="/public/assets/js/login.js"></script>
 </body>
 </html>
