@@ -163,8 +163,9 @@ html {
     background-color: var(--organge-color)
 }
 
-.nav-option .nav-search {
-    margin: 0 25px;
+.nav-option .nav-search,
+.lg-btn,.nav-username {
+    margin-right: 25px;
 }
 .nav-search .src-btn {
     width: 52px;
@@ -1623,10 +1624,10 @@ html {
     border-radius: 5px;
 }
 .form-group.success input {
-    border: 3px solid #09c372;;
+    border: 2px solid #09c372;;
 }
 .form-group.error  input {
-    border: 3px solid #ff3860;
+    border: 2px solid #ff3860;
 }
 .form-group .error {
     color: #ff3860;

@@ -1,100 +1,125 @@
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const { getUser, getUsers, createUser, matchUser } = require('./src/controller/userController');
+const express = require("express");
+const bcrypt = require("bcrypt");
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const jwt = require("jsonwebtoken");
+const dotenv = require("dotenv");
+const app = express();
+const path = require("path");
+const User = require("./src/model/userModel");
+dotenv.config();
+const PORT = process.env.PORT || 3000;
 
-const getMethods = (req, res) => {
-    if (req.url === "/") {
-        fs.readFile("./public/views/index.html", function (err, html) {
-            res.writeHead(200, { "Content-Type": "text/html" });
-            res.end(html);
-        });
+async function authenToken(req, res, next) {
+  console.log("cookies", req.cookies);
+  const accessToken = req.cookies.access_token;
+  if (!accessToken) {
+    res.status(401).send({ error: "Not authorized to access this resource" });
+    return;
+  }
+
+  try {
+    const data = jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
+
+    const user = await User.findById(data.id);
+    if (!user) {
+      res.status(401).send({ error: "Not authorized to access this resource" });
     }
-    else if (req.url === "/views/login") {
-        fs.readFile("./public/views/login.html", function (err, html) {
-            res.writeHead(200, { "Content-Type": "text/html" });
-            res.end(html);
-        });
-    }
-    else if (req.url === "/views/register") {
-        fs.readFile("./public/views/register.html", function (err, html) {
-            res.writeHead(200, { "Content-Type": "text/html" });
-            res.end(html);
-        });
-    }
-    else if (req.url === "/api/users") {
-        getUsers(req, res);
-    }
-    else if (req.url.match(/\/api\/users\/([0-9]+)/)) {
-        const id = req.url.split("/")[3];
-        getUser(req, res, id)
-    }
-    else if (req.url.match("\.css")) {
-        var cssPath = path.join(__dirname, req.url);
-        var fileStream = fs.createReadStream(cssPath);
-        res.writeHead(200, { "Content-Type": "text/css" });
-        fileStream.pipe(res);
-    }
-    else if (req.url.match("\.woff2")) {
-        var fontPath = path.join(__dirname, req.url);
-        var fileStream = fs.createReadStream(fontPath);
-        res.writeHead(200, { "Content-Type": "font/woff2" });
-        fileStream.pipe(res);
-    }
-    else if (req.url.match("\.png")) {
-        var imagePath = path.join(__dirname, req.url);
-        var fileStream = fs.createReadStream(imagePath);
-        res.writeHead(200, { "Content-Type": "image/png" });
-        fileStream.pipe(res);
-    }
-    else if (req.url.match("\.jpg")) {
-        var imagePath = path.join(__dirname, req.url);
-        var fileStream = fs.createReadStream(imagePath);
-        res.writeHead(200, { "Content-Type": "image/jpg" });
-        fileStream.pipe(res);
-    }
-    else if (req.url.match("\.js")) {
-        var jsPath = path.join(__dirname, req.url);
-        var fileStream = fs.createReadStream(jsPath);
-        res.writeHead(200, { "Content-Type": "text/javascript" });
-        fileStream.pipe(res);
-    }
+    req.user = user;
+    next();
+  } catch (error) {
+    res.status(401).send({ error: "Not authorized to access this resource" });
+  }
 }
 
-const postMethods = (req, res) => {
-    let data = '';
-    req.on('data', chunk => {
-        data += chunk;
-    });
-    req.on('end', () => {
-        res.end(data);
-    });
-    if (req.url === "/api/users/register") {
-        createUser(req, res);
-    }
-    if (req.url === "/api/users/login") {
-        matchUser(req, res);
-    }
-}
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
+app.get("/", function (req, res) {
+  res.sendFile(__dirname + "/public/views/index.html");
+});
 
-http.createServer(function (req, res) {
-    switch (req.method) {
-        case 'GET': {
-            getMethods(req, res);
-            break;
-        }
-        case 'POST': {
-            postMethods(req, res);
-            break;
-        }
+app.get("/home", authenToken, function (req, res) {
+  res.sendFile(__dirname + "/public/views/home.html");
+});
 
-        default: {
-            res.writeHead(200, { "Content-Type": "application/json" });
-            res.end(`
-                message : 'Endpoint not found'
-            `);
+app.get("/login", function (req, res) {
+  res.sendFile(__dirname + "/public/views/login.html");
+});
+app.get("/register", function (req, res) {
+  res.sendFile(__dirname + "/public/views/register.html");
+});
+app.get("/api/users", authenToken, async (req, res) => {
+  const users = await User.findAll();
+  res.json(users);
+});
+app.get("/api/user", authenToken, async (req, res) => {
+  res.json(req.user);
+});
+
+app.post("/api/login", async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const user = await User.findUser({ email });
+    if (!user) {
+      res.status(400).json({
+        message: "Login not successful",
+        error: "User not found",
+      });
+    } else {
+      bcrypt.compare(password, user.password).then(function (result) {
+        if (result) {
+          const maxAge = 60 * 60;
+          const accessToken = jwt.sign(
+            { id: user.id, username: user.username },
+            process.env.ACCESS_TOKEN_SECRET
+          );
+          res.cookie("access_token", accessToken, {
+            httpOnly: true,
+            maxAge: 4000,
+          });
+          res.status(200).json({
+            message: "Logged in successfully",
+            accessToken,
+          });
+        } else {
+          res.status(400).json({ message: "Logged in not successfully" });
         }
+      });
     }
-}).listen(3000, (err) => {
-    console.log('connected', err)
+  } catch (error) {
+    res.status(400).json({
+      message: "An error occurred",
+      error: error.message,
+    });
+  }
+});
+
+app.post("/logout", authenToken, (req, res) => {
+  return res
+    .clearCookie("access_token")
+    .status(200)
+    .json({ message: "Successfully logged out" });
+});
+
+app.post("/api/register", async (req, res) => {
+  const { username, email, password } = req.body;
+  const checkEmailExist = await User.findUser({ email });
+  if (checkEmailExist) {
+    return res.status(400).json({ message: "Email already exist !" });
+  }
+  bcrypt.hash(password, 10).then(async (hash) => {
+    await User.create({
+      username,
+      email,
+      password: hash,
+    });
+    res.status(200).json({
+      message: "User successfully created",
+    });
+  });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on PORT ${PORT}`);
 });

@@ -1,1 +1,50 @@
-[{"id":"eff6190f-f113-47aa-8133-278767960f8b","fullname":"nguyen le minh hieu","email":"minhhieu11@gmail.com","password":"Hieu1102@","cfpassword":"Hieu1102@"},{"id":"839aeb57-505d-48ed-937a-0f248003666c","fullname":"fdsfdsfdffsdff","email":"minhhieu1102@gmail.com","password":"Hieu1102@","cfpassword":"Hieu1102@"},{"id":"1f27aea6-f12f-4686-a540-9483033c2215","fullname":"babab1","email":"hghghghgh@gmail.com","password":"Hieu1102@","cfpassword":"Hieu1102@"},{"id":"9aba6979-a222-4930-a1fc-d451b7758c4c","fullname":"Tony","email":"tony@gmail.com","password":"Tinh123!@#","cfpassword":"Tinh123!@#"},{"id":"3d9143ef-1fbc-434e-8de4-c2b7321abe62","fullname":"fdfdf","email":"minhhieu11@gmail.com","password":"Minhhieu1102@","cfpassword":"Minhhieu1102@"}]
+[
+  {
+    "id": "f77fe022-7465-4f1b-a8b0-9a29fe4a80cc",
+    "username": "minhhieu",
+    "email": "minhhieu11@gmail.com",
+    "password": "$2b$10$H4NYnvOwvnt3uRxsgTURyeLcPXXOSqiVZ02MslO1mz5p1EMMlSyRi"
+  },
+  {
+    "id": "76f07ff4-ac0b-4803-9f08-6585578db9bb",
+    "username": "minhhieu",
+    "email": "minhhieu1102@gmail.com",
+    "password": "$2b$10$gYJCnevchrwNZrrB4ZiMReNl4tjquhm9bZaRPl9maUySuIzvI3BE2"
+  },
+  {
+    "id": "71a5b01f-abb2-4dc6-82f7-62503a072b9f",
+    "username": "minhhieu",
+    "email": "minhhieudtr11@gmail.com",
+    "password": "$2b$10$WXOn.mH9Q8xz4bxY3lZehOodwoBWvfrybE1toISWqR8LXt.pj/c4K"
+  },
+  {
+    "id": "ac82d4b4-ff2e-4f9e-8902-7173a9bba629",
+    "username": "minhhieu",
+    "email": "minhhieu@gmail.com",
+    "password": "$2b$10$PbKeu2NDM24iMZaGYEWwTO.Mt7Z/zEVwrgrZ4bZYbTpoF4f3IlPta"
+  },
+  {
+    "id": "1d3c001a-7f5f-4a93-9508-42d52452d06c",
+    "username": "minhhieu",
+    "email": "minhhieu@tonytech.com",
+    "password": "$2b$10$ZXEEM36c.x/PQggP83g4eOdJB2gp7O3.sO.XfKl6XgajKuJp55wSG"
+  },
+  {
+    "id": "021e898a-a75f-479f-9ee2-46b283afee7f",
+    "username": "minhhieu",
+    "email": "minhhieu@gmail.com.vn",
+    "password": "$2b$10$Why7rsNd4jI/IESrFMWdJO5Ovmukx2o7.iOF0JxX0gMbEJcI7BA9W"
+  },
+  {
+    "id": "06aeb794-97d0-4b88-9bfc-33610be9b1ff",
+    "username": "Minh Hieu",
+    "email": "hieu11@gmail.com",
+    "password": "$2b$10$OtaUhn4SVia09uRSpKbREOqxYWk6eeceJ4nvF201KyyuVlC2f0356"
+  },
+  {
+    "id": "61f511ec-c541-47f9-845b-882fd6e58803",
+    "username": "tonyc",
+    "email": "tonyc@gmail.com",
+    "password": "$2b$10$r65tUROvhWoma0zeF9ZSa.Pjnn93KpidjZDNTkrqwffgQ3AMNnH.i"
+  }
+]

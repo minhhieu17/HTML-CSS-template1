@@ -1,0 +1,20 @@
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+    "email": "minhhieu11@gmail.com",
+    "password": "minhhieu"
+}
+
+###
+GET http://localhost:3000/home
+Cookie: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY3N2ZlMDIyLTc0NjUtNGYxYi1hOGIwLTlhMjlmZTRhODBjYyIsInVzZXJuYW1lIjoibWluaGhpZXUiLCJpYXQiOjE2NTgzNzAxNzEsImV4cCI6MTY1ODM4MDk3MX0.-yBpNjd9BBA2ugZqTnnryYh-cMfY5iEPeoRzF9rFgzw
+
+###
+DELETE  http://localhost:3000/logout
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY3N2ZlMDIyLTc0NjUtNGYxYi1hOGIwLTlhMjlmZTRhODBjYyIsInVzZXJuYW1lIjoibWluaGhpZXUiLCJpYXQiOjE2NTgzNzAxMjcsImV4cCI6MTY1ODM4MDkyN30.MbwhwmWwvDNQs3cLCAC-wLTgdZplZiWUm9HSnRSvFBE"
+}
